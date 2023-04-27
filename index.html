@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRN - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="CRDLogo.png" alt="RiseLab Logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index_about.html">About CRD</a></li>
+        <li><a href="index_research.html">Research</a></li>
+        <li><a href="index_people.html">People</a></li>
+        <li><a href="index_publications.html">Publications</a></li>
+        <li><a href="index_contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main style="position: relative;">
+    <video id="slider" autoplay muted loop style="width: 100vw; height: auto; margin:0; padding: 0;">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div style="position: absolute; top: 0%; left: 100%; transform: translate(30%, 20%); font-size: 62px; color: white;" >FOR THE FUTURE</div>
+    
+    <img src="image1.png" alt="이미지 설명" style="width: 100vw; height: auto;"> 
+    <div style="position: absolute; top: 22%; left: 100%; transform: translate( 50%, 0%); font-size: 25px; color: white; " class="vision">GREEN AND SUSTANABLE BUILDING MECHANICAL SYSTEMS</div>
+   
+    <img src="image2.png" alt="이미지 설명" style="width: 100vw; height: auto;">
+    <div style="position: absolute; top: 31.2%; left: 100%; transform: translate( 50%, 0%); font-size: 25px; color: white; " class="vision2">RENEWABLE ENERGY AND ALTERNATE SYSTEM APPLICATION</div>
+    <img src="image3.png" alt="이미지 설명" style="width: 100vw; height: auto;">
+    <div style="position: absolute; top: 40.1%; left: 100%; transform: translate( 54%, 0%); font-size: 25px; color: white; " class="vision3">ENERGY MODELLING AND BUILDING SIMULATION</div>
+    <img src="image4.png" alt="이미지 설명" style="width: 100vw; height: auto;">
+    <div style="position: absolute; top: 50.5%; left: 100%; transform: translate( 42%, 0%); font-size: 25px; color: white; " class="vision4">HVAC SYSTEM DESIGN AND ENVIROMENTAL CONTROL</div>
+    <img src="image5.png" alt="이미지 설명" style="width: 100vw; height: auto;">
+    <div style="position: absolute; top: 59%; left: 100%; transform: translate( 47%, 0%); font-size: 25px; color: white; " class="vision5">EMERGING TECHNOLOGY IN BUILDING MECHANICAL SYSTEM</div>
+    <img src="image6.png" alt="이미지 설명" style="width: 100vw; height: auto;">
+    <div style="position: absolute; top: 70%; left: 450%; transform: translate(600%, -50%); text-align: center; font-size: 32px; color: white; " class="vision6">NEWS</div>
+
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 BE-SEEDS LAB. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    let slider = document.getElementById("slider");
+    let videos = ["video.mp4"];
+    let currentIndex = 0;
+
+    function playVideo() {
+      slider.setAttribute("src", videos[currentIndex]);
+      slider.play();
+      currentIndex++;
+      if (currentIndex === videos.length) {
+        currentIndex = 0;
+      }
+    }
+
+    slider.addEventListener('ended', playVideo);
+    playVideo();
+
+
+    const vision = document.querySelector('.vision');
+    const test1 = document.querySelector('.vision2');
+    const test2 = document.querySelector('.vision3');
+    const test3 = document.querySelector('.vision4');
+    const test4 = document.querySelector('.vision5');
+    const test5 = document.querySelector('.vision6');
+
+function showVision() {
+  const top = vision.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  if (top < windowHeight / 2) {
+    vision.style.opacity = 1;
+    window.removeEventListener('scroll', showVision);
+  }
+  window.requestAnimationFrame(showVision);
+}
+
+window.addEventListener('scroll', showVision);
+
+function showText(element) {
+  const top = element.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  if (top < windowHeight / 2) {
+    element.style.opacity = 1;
+    window.removeEventListener('scroll', showText);
+  }
+}
+
+window.addEventListener('scroll', function() {
+  showText(vision);
+  showText(test1);
+  showText(test2);
+  showText(test3);
+  showText(test4);
+  showText(test5);
+});
+
+
+  </script>
+
+</body>
+</html>

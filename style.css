@@ -1,0 +1,194 @@
+/* reset.css */
+/* 기본적인 스타일 초기화 */
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* RiseLab 전체 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #eee;
+  text-align: center;
+  padding: 20pt 0;
+}
+
+header a {
+  display: inline-block;
+  margin-right: 20pt;
+}
+
+header img {
+  height: 50pt;
+  vertical-align: middle;
+}
+
+nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 50px; /* 배너 버튼과 같은 높이 */
+}
+
+nav a:hover {
+  color: #666;
+}
+
+main {
+  max-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* 추가한 CSS */
+@media screen and (min-width: 768px) {
+  header {
+    padding: 20px;
+  }
+  header a {
+    margin-right: 40px;
+  }
+  nav li {
+    margin: 0 20px;
+  }
+}
+
+/* Vision 애니메이션 */
+.vision {
+  transform: translate(-50%, 0%);
+  transition: transform 0.5s ease;
+}
+
+main video,
+main img {
+  transition: transform 0.5s ease;
+}
+
+main img:hover,
+main video:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    max-width: 100%;
+  }
+  .vision {
+    transform: translate(-30%, 0%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 20px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+}
+
+
+.vision {
+  filter: brightness(1);
+  opacity: 0;
+  transition: filter 1.2s ease, opacity 1.2s ease;
+}
+
+
+.vision2 {
+  filter: brightness(1);
+  opacity: 0;
+  transition: filter 1.2s ease, opacity 1.2s ease;
+}
+
+.vision3 {
+  filter: brightness(1);
+  opacity: 0;
+  transition: filter 1.2s ease, opacity 1.2s ease;
+}
+
+
+.vision4 {
+  filter: brightness(1);
+  opacity: 0;
+  transition: filter 1.2s ease, opacity 1.2s ease;
+}
+
+.vision5 {
+  filter: brightness(1);
+  opacity: 0;
+  transition: filter 1.2s ease, opacity 1.2s ease;
+}
+
+.vision6 {
+  filter: brightness(1);
+  opacity: 0;
+  transition: filter 1.2s ease, opacity 1.2s ease;
+}
+
+@keyframes slideIn {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 30%;
+  }
+}
+
